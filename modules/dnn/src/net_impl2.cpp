@@ -27,6 +27,7 @@ std::string argKindToString(ArgKind kind)
         kind == DNN_ARG_OUTPUT ? "Output" :
         kind == DNN_ARG_TEMP ? "Temp" :
         kind == DNN_ARG_PATTERN ? "Pattern" : "???";
+        kind == DNN_ARG_CACHED ? "Cached" : "???";
 }
 
 ArgData::ArgData()
