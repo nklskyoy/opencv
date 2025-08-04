@@ -3471,6 +3471,10 @@ TEST_P(Test_ONNX_layers, TopK) {
     test("top_k_smallest");
 }
 
+TEST_P(Test_ONNX_layers, Gemma2Attention) {
+    testONNXModels("gemma2_attention", npy, default_l1, default_lInf, false, true, 3);
+}
+
 INSTANTIATE_TEST_CASE_P(/**/, Test_ONNX_nets, dnnBackendsAndTargets());
 
 }} // namespace
