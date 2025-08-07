@@ -3475,6 +3475,10 @@ TEST_P(Test_ONNX_layers, Gemma2Attention) {
     testONNXModels("gemma2_attention", npy, default_l1, default_lInf, false, true, 3);
 }
 
+TEST_P(Test_ONNX_layers, Gemma2) {
+    testONNXModels("gemma2_dummy", npy, default_l1, default_lInf, false, true, 1);
+}
+
 INSTANTIATE_TEST_CASE_P(/**/, Test_ONNX_nets, dnnBackendsAndTargets());
 
 }} // namespace
