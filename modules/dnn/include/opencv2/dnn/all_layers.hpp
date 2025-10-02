@@ -526,6 +526,12 @@ CV__DNN_INLINE_NS_BEGIN
         static Ptr<IsInfLayer> create(const LayerParams& params);
     };
 
+    class CV_EXPORTS GridSampleLayer : public Layer
+    {
+    public:
+        static Ptr<GridSampleLayer> create(const LayerParams& params);
+    };
+
     class CV_EXPORTS FlattenLayer : public Layer
     {
     public:
@@ -1275,6 +1281,12 @@ CV__DNN_INLINE_NS_BEGIN
         static Ptr<DetLayer> create(const LayerParams &params);
     };
 
+    class CV_EXPORTS Resize2Layer : public Layer
+    {
+    public:
+        static Ptr<Resize2Layer> create(const LayerParams& params);
+    };
+
     /**
      * @brief Bilinear resize layer from https://github.com/cdmh/deeplab-public-ver2
      *
@@ -1331,6 +1343,12 @@ CV__DNN_INLINE_NS_BEGIN
         static Ptr<Tile2Layer> create(const LayerParams& params);
     };
 
+    class CV_EXPORTS UniqueLayer : public Layer
+    {
+    public:
+        static Ptr<UniqueLayer> create(const LayerParams& params);
+    };
+
     class CV_EXPORTS LayerNormLayer : public Layer
     {
     public:
@@ -1368,6 +1386,12 @@ CV__DNN_INLINE_NS_BEGIN
         static Ptr<Expand2Layer> create(const LayerParams &params);
     };
 
+    class CV_EXPORTS NonZeroLayer : public Layer
+    {
+    public:
+        static Ptr<NonZeroLayer> create(const LayerParams& params);
+    };
+
     class CV_EXPORTS InstanceNormLayer : public Layer {
     public:
         float epsilon;
@@ -1388,6 +1412,12 @@ CV__DNN_INLINE_NS_BEGIN
     class CV_EXPORTS CastLayer : public Layer {
     public:
         static Ptr<CastLayer> create(const LayerParams &params);
+    };
+
+    class CV_EXPORTS NonMaxSuppressionLayer : public Layer
+    {
+    public:
+        static Ptr<NonMaxSuppressionLayer> create(const LayerParams& params);
     };
 
     class CV_EXPORTS ClipLayer : public Layer {
